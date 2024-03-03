@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/colby_llm_website/static/css/main.72313ba6.css",
+    "main.js": "/colby_llm_website/static/js/main.3036c4f9.js",
+    "static/js/453.b9b4a01c.chunk.js": "/colby_llm_website/static/js/453.b9b4a01c.chunk.js",
+    "static/media/montserrat-v25-latin-regular (1).woff2": "/colby_llm_website/static/media/montserrat-v25-latin-regular (1).acb6629fe45c43ad5d8b.woff2",
+    "index.html": "/colby_llm_website/index.html",
+    "main.72313ba6.css.map": "/colby_llm_website/static/css/main.72313ba6.css.map",
+    "main.3036c4f9.js.map": "/colby_llm_website/static/js/main.3036c4f9.js.map",
+    "453.b9b4a01c.chunk.js.map": "/colby_llm_website/static/js/453.b9b4a01c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.72313ba6.css",
+    "static/js/main.3036c4f9.js"
+  ]
+}
