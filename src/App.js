@@ -10,7 +10,7 @@ function App() {
   const [inputModel, setInputModel] = useState('gpt-4');
   const [temperature, setTemperature] = useState(0.7);
   const [maxTokens, setMaxTokens] = useState(500);
-  const [apiKey, setApiKey] = useState('llm_api-fTpmESmiOrZLiJkwXCK8Y8Mx');
+  const [apiKey, setApiKey] = useState('');
   const [userQuery, setQuery] = useState('');
   const [messages, setMessages] = useState([]);
   const [response, setResponse] = useState('');
@@ -40,6 +40,11 @@ function App() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (!userQuery.trim()) return; // Prevent empty queries
+    if (loading) return; // Prevent multiple simultaneous requests
+    if (!apiKey) {
+      setErrorMessage('Please enter an API key');
+      return;
+    }
     setLoading(true);
     setQuery(''); // Clear the input field
     setErrorMessage('');
