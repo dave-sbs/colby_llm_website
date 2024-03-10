@@ -1,147 +1,318 @@
-/* Styles for the navbar and model selector */
-/* .navbar { */
-  /* width: 100%; */
-  /* background-color: #f0f0f0; Light grey background */
-  /* padding: 10px 0; Some padding at the top and bottom */
-  /* text-align: center; Center align the content */
-/* } */
+/* NEW */
 
-/* Styles for the user input bar */
-/* .user-input-bar { */
-  /* display: flex; */
-  /* justify-content: center; Center align the form */
-  /* align-items: center; Vertically align */
-  /* height: 80vh; Take up majority of the viewport height, pushing the form to the center */
-/* } */
-
-/* .input-bar { */
-  /* margin-top: -20vh; Adjust based on your form's visual appearance */
-/* } */
-
-/* Style adjustments for the select dropdown */
-select {
-  padding: 5px 10px; /* Add some padding */
-  margin-top: 70px; /* Extra space above the dropdown */
-  cursor: pointer; /* Change cursor on hover */
-}
-
-/* Styles for the response area to be centered */
-.ResponseArea {
-  flex-grow: 1; /* Allows the div to expand as needed, pushing the InputArea to the bottom */
+.App {
+  text-align: center;
   display: flex;
-  justify-content: center; /* Centers content horizontally */
-  align-items: center; /* Centers content vertically */
-  text-align: center; /* Ensures the text inside <p> is centered as well */
-}
-
-/* Styles for the input area, ensuring it's at the bottom and centered */
-.InputArea {
-  margin: 0 auto; /* Centers the div */
-  width: 100%; /* Ensures it spans the width of its parent */
-  text-align: center; /* Centers the inner content */
-  padding: 20px 0; /* Adds some padding above and below for visual spacing */
-  position: absolute;  /* Allows the div to be positioned relative to the parent */
-  bottom: 0; /* Places the div at the bottom */
-}
-
-.InputArea textarea {
-  width: 30%; /* Adjusts width of the textarea, you can set it as per your design */
-  margin-right: 10px; /* Adds some space between the textarea and the button */
-}
-
-.InputArea button {
-  cursor: pointer; /* Changes cursor to pointer when hovering over the button */
+  position: absolute;
+  top:0; bottom:0; left:0; right:0;
 }
 
 
-#userInput {
-  width: 30%;
-  padding: 12px 20px;
-  margin-right: 10px;
-  border: 1px solid #ccc;
-  border-radius: 25px;
-  resize: none;
-}
-
-#sendButton {
-  padding: 10px 20px;
-  background-color: #4a67ff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-/* Additional styles for input and button for better appearance */
-input[type="text"] {
+/* Sidemenu section */
+.sidemenu {
+  width: 260px;
   padding: 10px;
-  margin-right: 10px; /* Space between the input field and the submit button */
-  border: 1px solid #ccc; /* Light grey border */
-  border-radius: 4px; /* Rounded corners */
+  background-color: rgb(249, 249, 249);
 }
 
-button[type="submit"] {
-  padding: 10px 20px;
-  background-color: #007bff; /* Bootstrap primary blue */
-  color: white;
-  border: none;
-  border-radius: 4px;
+.sidemenu-button {
+  padding: 12px;
+  margin-top: 7px;
+  /* border: 1px solid rgb(0, 0, 0); */
+  border-radius: 10px;
+  text-align: left;
+  font-weight: bolder;
+  font-size:large;
+}
+
+.sidemenu-button:hover {
+  background-color: rgb(233, 233, 233, 0.7);
+  cursor: pointer;
+  /* border: 1px solid rgb(249, 249, 249); */
+  transition: ease-in 0.25s all;
+}
+
+.sidemenu-button-span {
+  padding-left: 6px;
+  padding-right: 12px;
+}
+
+.model-selector-section {
+  padding: 12px;
+  margin-top: 7px;
+  /* border: 1px solid rgb(0, 0, 0); */
+  border-radius: 10px;
+  /* text-align: left; */
+  font-weight: regular;
+}
+
+.model-selector-header {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-top: 7px;
+  /* border: 1px solid rgb(0, 0, 0); */
+  border-radius: 10px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.custom-select-container {
+  position: relative;
+  width: 100%; /* Set the width of the select box */
+  font-family: Arial, sans-serif;
+}
+
+.selected-value {
+  padding: 12px;
+  margin-top: 7px;
+  /* font-weight: bold; */
+  border: 1px solid #ccc;
+  border-radius: 10px; 
+  width: 100%;
+  cursor: pointer;
+  background-color: #fffafa;
+  user-select: none;
+  text-align: left;
+  display: flex;
+  white-space: nowrap;
+  overflow:auto;
+  text-overflow: ellipsis;
+}
+
+.custom-options-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; /* Allow wrapping */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  overflow-y: auto; /* Enable vertical scrolling */
+  position: absolute;
+  margin-top: 7px;
+  left: 0;
+  /* right: 0; */
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  /* border-right: none; */
+  z-index: 10;
+  background-color: #fff;
+  max-height: 200px; /* Set max height for options container */
+  font-size: 12px;
+}
+
+.custom-option {
+  display: flex;
+  padding: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.custom-option:hover {
+  background-color: #f0f0f0;
+}
+
+/* Custom scrollbar */
+.custom-options-container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.custom-options-container::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+.custom-options-container::-webkit-scrollbar-thumb {
+  background: #ffffff;
+}
+
+.custom-options-container::-webkit-scrollbar-thumb:hover {
+  background: #8d8c8c;
+  border-radius: 10px;
   cursor: pointer;
 }
 
-button[type="submit"]:hover {
-  background-color: #0056b3; /* Darker blue on hover */
-}
-
-/* 
-.slider-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 15px;
-}
-
-.slider-container input[type=range] {
-  -webkit-appearance: none;
+.api-key-input {
+  padding: 12px;
+  margin-top: 7px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: left;
   width: 100%;
-  margin: 10px 0;
-}
-
-.slider-container input[type=range]:focus {
+  /* hide the text */
+  -webkit-text-security: disc;
   outline: none;
 }
 
-.slider-container input[type=range]::-webkit-slider-runnable-track {
+.api-key-input:hover{
+  cursor: pointer;
+}
+
+.api-key-input:focus {
+  -webkit-text-security: none;
+}
+
+.slider-container {
+  padding: 12px;
+  margin-top: 7px;
+  font-weight: regular;
+}
+
+.slider-top-row {
+  display: flex;
   width: 100%;
-  height: 8.4px;
-  cursor: pointer;
-  animate: 0.2s;
-  box-shadow: 1px 1px 1px #000000;
-  background: #3071a9;
-  border-radius: 1.3px;
-  border: 0.2px solid #010101;
 }
 
-.slider-container input[type=range]::-webkit-slider-thumb {
-  box-shadow: 1px 1px 1px #000000;
-  border: 1px solid #000000;
-  height: 36px;
-  width: 16px;
-  border-radius: 3px;
-  background: #ffffff;
-  cursor: pointer;
-  -webkit-appearance: none;
-  margin-top: -14px;
+.temperature-value {
+  right: 0;
 }
 
-.slider-container input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #367ebd;
+.temperature-number {
+  align-items: center;
+  justify-content: center;
 }
 
-.slider-container input[type=number] {
-  max-width: 100px;
-  padding: 5px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+
+/* Chatbox Section */
+.chatbox {
+  flex: 1;
+  position: relative;
+}
+/* Chat messages container should be scrollable */
+.chat-log {
+  padding: 24px;
+  padding-bottom: 10px;
+  text-align: left;
+  max-height: calc(100vh - 150px); /* Height of the viewport minus the height of the input container */
+  overflow-y: auto; /* Enables scrolling */
+}
+
+.chat-message-center {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  max-width: 70%;
+}
+
+.top-row {
+  display: flex;
+  width: 100%;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
   text-align: center;
-} */
+  justify-content: center;
+  padding: 4.5px;
+  font-size: small;
+  background: #d8d8d8;
+  color: rgb(20, 20, 20);
+}
+
+
+.avatar.query {
+  background: #218aff;
+  color: #fdfdfd;
+}
+
+
+.avatar.llm {
+  background: #d8d8d8;
+  color: rgb(20, 20, 20);
+}
+
+.message {
+  padding-left: 10px;
+  padding-top: 3px;
+  padding-right: 5px;
+  font-size: 1rem;
+  width: 100%;
+  font-weight: bolder;
+}
+
+.output-text {
+  padding-left: 35px;
+  width: 97%;
+  line-height: 1.5;
+}
+
+p {
+  margin-top: 5px;
+  padding: 5px;
+}
+
+/* User Query Entry Section */
+.chatbox-input-container {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  size: 80%;
+  z-index: 100;
+}
+
+.chatbox-input-holder {
+  position: relative;
+  border: 1px solid #ccc; /* Example border, adjust as needed */
+  border-radius: 15px; /* Rounded borders */
+  width: 70%;
+  padding: 5px 10px; /* Padding inside the container */
+  display: flex; /* Align textarea and button */
+  align-items: center; /* Center items vertically */
+  gap: 10px; /* Space between items */
+  background-color: #fff; /* Background color */
+  margin-left: auto;
+  margin-right: auto;
+  align-items: baseline;
+}
+
+textarea {
+  overflow-y: hidden;
+  resize: none;
+  min-height: 18.398px;
+  max-height: 200px;
+}
+
+.chatbox-input-entry {
+  flex-grow: 1; /* Let the textarea grow to fill space */
+  border: none; /* Remove the default border */
+  outline: none; /* Remove the outline */
+  border-radius: 15px; /* Match the border-radius of the holder */
+  padding: 15px; /* Padding inside the textarea */
+}
+
+.submit-button {
+  padding: 7px;
+  margin-top: auto;
+  margin-bottom: 5px;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: black;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bolder;
+  font-size:larger;
+}
+
+.submit-button:hover {
+  cursor: pointer;
+}
+
+.submit-button-span {
+  color: white;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+
+.disclaimer {
+  color: red;
+  margin: 2px;
+  font-size: small;
+}
+
