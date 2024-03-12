@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Colby LLM Playground",
+  "name": "Colby LLM Playground Website",
   "icons": [
     {
       "src": "favicon.ico",

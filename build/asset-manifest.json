@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/colby_llm_website/static/css/main.8414e537.css",
-    "main.js": "/colby_llm_website/static/js/main.e3462da2.js",
+    "main.css": "/colby_llm_website/static/css/main.77467045.css",
+    "main.js": "/colby_llm_website/static/js/main.b423dfe6.js",
     "index.html": "/colby_llm_website/index.html",
-    "main.8414e537.css.map": "/colby_llm_website/static/css/main.8414e537.css.map",
-    "main.e3462da2.js.map": "/colby_llm_website/static/js/main.e3462da2.js.map"
+    "main.77467045.css.map": "/colby_llm_website/static/css/main.77467045.css.map",
+    "main.b423dfe6.js.map": "/colby_llm_website/static/js/main.b423dfe6.js.map"
   },
   "entrypoints": [
-    "static/css/main.8414e537.css",
-    "static/js/main.e3462da2.js"
+    "static/css/main.77467045.css",
+    "static/js/main.b423dfe6.js"
   ]
 }
