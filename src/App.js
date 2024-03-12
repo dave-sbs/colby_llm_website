@@ -140,7 +140,7 @@ function App() {
             </div>
           </div>
           <div className="data-policy-container">
-            <a className="data-policy-link" href="https://docs.google.com/document/d/1JXtsgEEsOOuIRa2r48Qt_opgm0VQweYz/edit?usp=sharing&ouid=111918454245127141486&rtpof=true&sd=true" target="_blank">Curious how we handle your data?</a>
+            <a className="data-policy-link" href="https://docs.google.com/document/d/1JXtsgEEsOOuIRa2r48Qt_opgm0VQweYz/edit?usp=sharing&ouid=111918454245127141486&rtpof=true&sd=true" target="_blank">Curious about how we handle your data?</a>
           </div>
         </div>
         {/* <div className="slider-container">
