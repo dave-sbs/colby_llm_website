@@ -8,7 +8,7 @@ function App() {
   const modelList = ['MIXTRAL_8X7B_INSTRUCT_FP16', 'CODELLAMA_13B_INSTRUCT_FP16', 'CODELLAMA_34B_INSTRUCT_FP16', 'CODELLAMA_70B_INSTRUCT_FP16', 'CODELLAMA_7B_INSTRUCT_FP16', 'LLAMA_2_70B_CHAT_FP16', 'MISTRAL_7B_INSTRUCT_FP16', 'gpt-4-turbo-preview', 'gpt-4', 'gpt-3.5-turbo'];
 
   const [inputModel, setInputModel] = useState('gpt-4');
-  const [temperature, setTemperature] = useState(0.7);
+  const [temperature, setTemperature] = useState(0.3);
   const [maxTokens, setMaxTokens] = useState(500);
   const [apiKey, setApiKey] = useState('');
   const [userQuery, setQuery] = useState('');
@@ -113,6 +113,13 @@ function App() {
         </div>
         <div className="model-selector-section">
           <div className="model-selector-header">
+            API Key
+          </div>
+          <input className="api-key-input" value={apiKey} onChange={(e) => setApiKey(e.target.value)} />
+          {/* <a className="find-api-link" href="">Don't Know Where to Find Your API Key?</a> */}
+        </div>
+        <div className="model-selector-section">
+          <div className="model-selector-header">
             Models
           </div>
           <div className="custom-select-container">
@@ -132,13 +139,9 @@ function App() {
                 ))}
             </div>
           </div>
-        </div>
-
-        <div className="model-selector-section">
-          <div className="model-selector-header">
-            API Key
+          <div className="data-policy-container">
+            <a className="data-policy-link" href="https://docs.google.com/document/d/1JXtsgEEsOOuIRa2r48Qt_opgm0VQweYz/edit?usp=sharing&ouid=111918454245127141486&rtpof=true&sd=true" target="_blank">Curious how we handle your data?</a>
           </div>
-          <input className="api-key-input" value={apiKey} onChange={(e) => setApiKey(e.target.value)} />
         </div>
         {/* <div className="slider-container">
           <div className="slider-top-row">
